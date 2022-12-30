@@ -417,7 +417,8 @@ while True:
         muhiadin_per.write(f"<strong style='color:#99004d;'>You are ahead by : {votes4muhiadin-hv1} votes</strong>",unsafe_allow_html=True)
   elif selected2 == 'Image':
     storage = firebase.storage()
-    datadir = 'C:/Users/jabz/Desktop/display/images/'
+    directory = os.getcwd()
+    datadir = f'{directory}/images'
     all_files = storage.child("images").list_files()
     for file in all_files:
         try:
